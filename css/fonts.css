@@ -1,0 +1,20 @@
+@font-face {
+    font-family: CormorantSC-SemiBold ;
+    src: url("fonts/CormorantSC-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: NotoSans-Bold ;
+    src: url("fonts/NotoSans-Bold.ttf");
+}
+
+@font-face {
+    font-family: BigshotOne-Regular ;
+    src: url("fonts/BigshotOne-Regular.ttf");
+}
+
+
+
+.BigshotOne-Regular{ font-family: BigshotOne-Regular;}
+.NotoSans-Bold{ font-family: NotoSans-Bold;}    
+.CormorantSC-SemiBold{ font-family: CormorantSC-SemiBold;}

@@ -1,0 +1,248 @@
+
+@media screen and (max-width: 1000px) 
+{
+
+    .heading
+    {
+        text-align: center;
+    }
+
+    /* NAVIGATION BAR STYLING */
+
+    nav .menu-container 
+    {
+        border-top: 1px solid var(--text-white);
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 12.5vh);
+        background: var(--background-dark);
+        padding: 1rem;
+        transition: 1s top ease-in-out;
+    }
+
+    nav .menu-container.active 
+    {
+        top: 12.5vh;
+    }
+
+    nav .menu-container .menu-item
+    {
+        display: flex;
+        width: 100%;
+        height: 60px;
+        margin-bottom: 10px;
+        /* border: red solid 2px; */
+    }
+
+    nav .menu-container .menu-item:hover,
+    nav .menu-container .menu-item.active
+    {
+        border-bottom: 1px solid var(--text-white);
+        background: var(--background-white);
+        color: var(--text-dark);
+    }
+
+    nav .menu-icon-container
+    {
+        display: block;
+    }
+
+    nav .menu-icon-container  .menu-icon
+    {
+        color: var(--text-white);
+        font-size: 25px;
+    }
+
+    /* MASTHEAD STYLING */
+    .masthead
+    {
+        height: 500px;
+        padding: 1rem 0;
+    }
+
+    .masthead .title
+    {
+        font-size: calc(100% + 1.5rem);
+    }
+
+    .masthead .role
+    {
+        font-size: calc(100% + 0.2rem);
+    }
+
+    .masthead .button-group button,
+    .masthead .button-group .btn
+    {
+        width: 150px;
+        height: 50px;
+        font-size: calc(100% + 3px);
+    }
+
+    /* MASTHEAD STYLING  END*/
+
+    /* ABOUT ME SECTION */
+
+    .about
+    {
+        flex-direction: column-reverse;
+    }
+
+    .about .image,
+    .about .contents
+    {
+        width: 100%;
+    }
+
+    .about .image
+    {
+        margin-bottom: 20px;
+    }
+
+    /* ABOUT ME SECTION END*/
+    
+    /* PROJECTS SECTION */
+
+    .projects .body .project-card
+    {
+        width: 50%;
+        margin: 0;
+        padding-top: 20px;
+        border-bottom: 1px solid var(--text-dark);
+    }
+
+    .projects .body .project-card:nth-of-type(even)
+    {
+        border-left: 1px solid var(--text-dark);
+    }
+
+
+    /* PROJECTS SECTION  END*/
+
+    /* NEWSLETTER SECTION */
+
+    .newsletter
+    {
+        padding: 0 1rem;
+    }
+    /* NEWSLETTER SECTION END*/
+
+    /* CONTACT SECTION */
+
+    .contact
+    {
+        flex-direction: column-reverse;
+    }
+
+    .contact .image,
+    .contact .contents
+    {
+        width: 100%;
+    }
+
+    .contact .image
+    {
+        display: none;
+    }
+
+    .contact .contact-form
+    {
+        padding: 1rem;
+    }
+
+    .contact .contact-form .submit button
+    {
+        width: 100%;
+    }
+
+    .contact .socials
+    {
+        flex-wrap: wrap;
+    }
+
+    .contact .socials .social
+    {
+        margin-bottom: 10px;
+    }
+
+    /* CONTACT SECTION END*/
+
+    /* INSPIRATION MESSAGE */
+
+    .inspirationMessage .opacity
+    {
+        padding: 0 1rem;
+    }
+
+    /* INSPIRATION MESSAGE  END*/
+
+}
+
+@media screen and (max-width: 500px) 
+{
+
+    /* PROJECTS SECTION */
+
+    .projects .body
+    {
+        flex-direction: column;
+    }
+
+    .projects .body .project-card
+    {
+        width: 100%;
+        margin: 20px 0;
+        border-bottom: 1px solid var(--text-dark);
+    }
+
+    .projects .body .project-card:nth-of-type(even)
+    {
+        border-left: none;
+    }
+
+    /* PROJECTS SECTION  END*/
+    
+}
+
+@media screen and (max-width: 300px) 
+{
+    
+    .button-group
+    {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .button-group button,
+    .button-group .btn
+    {
+        margin-bottom: 10px;
+    }
+
+    .newsletter
+    {
+        height: max-content;
+        padding: 1rem 0.5rem;
+    }
+
+    .newsletter .para 
+    {
+        font-size: calc(100%);
+    }
+
+    .newsletter .form
+    {
+        display: block;
+    }
+
+    .newsletter .form input,
+    .newsletter .form button
+    {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+}

@@ -1,0 +1,635 @@
+@import url('fonts.css');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --link-color: rgb(179, 67, 39) ;
+    --background-white: #f1f1f1 ;
+    --background-dark: #313131 ;
+    --text-dark: #000;
+    --text-white: #fff;
+}
+
+.display-block
+{
+    display: block !important;
+}
+
+.display-none
+{
+    display: none !important;
+}
+
+html
+{
+    height: 100%;
+}
+
+body
+{
+    font-family: CormorantSC-SemiBold, sans-serif;
+    font-size: 14px;
+}
+
+body :is(h1,h2,h3,h4,h5,h6, .heading)
+{
+    font-family: NotoSans-Bold, sans-serif;
+}
+
+.heading
+{
+    padding: 1rem;
+    background: var(--background-dark);
+    color: var(--text-white);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: calc(100% + 0.3rem);
+}
+
+/* STYLING HTML ELEMENTS */
+
+a
+{
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+button,
+.btn
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    width: 150px;
+    height: 40px;
+    padding: 0.5rem;
+    background: var(--link-color);
+    color: var(--text-white);
+    font-family: inherit;
+    letter-spacing: 2px;
+}
+
+section
+{
+    min-height: 40vh;
+    width: 100%;
+    padding: 1rem 0.7rem;
+}
+
+.button-group
+{
+    display: flex;
+}
+
+.button-group button,
+.button-group .btn
+{
+    margin-right: 5px;
+}
+
+.text-center
+{
+    text-align: center;
+}
+
+.text-left
+{
+    text-align: left;
+}
+
+.text-right
+{
+    text-align: right;
+}
+
+
+/* STYLING HTML ELEMENTS */
+
+/* NAVIGATION BAR STYLING */
+
+nav
+{
+    height: 12.5vh;
+    width: 100%;
+    background: var(--background-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+nav .logo
+{
+    font-family: BigshotOne-Regular;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: 0.5s color ease-in-out;
+}
+
+nav .logo:hover
+{
+    color: var(--text-white);
+}
+
+nav .menu-container .menu-item
+{
+    display: inline-flex;
+    width: 100px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-white);
+    cursor: pointer;
+}
+
+nav .menu-container .menu-item:hover,
+nav .menu-container .menu-item.active
+{
+    border-bottom: 1px solid var(--text-white);
+}
+
+nav .menu-icon-container
+{
+    display: none;
+}
+
+/* NAVIGATION BAR STYLING END */
+
+
+/* MASTHEAD STYLING */
+
+.masthead
+{
+    height: calc(100vh - 12.5vh);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("../images/background-home-desktop.jpg"), linear-gradient( var(--background-white), var(--background-dark) );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--text-white);
+    flex-direction: column;
+}
+
+.masthead .title,
+.masthead .role,
+.masthead .button-group
+{
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.masthead .title
+{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-size: calc(100% + 5rem);
+}
+
+.masthead .role
+{
+    font-size: calc(100% + 1rem);
+}
+
+.masthead .role span::after
+{
+    content: "  .";
+}
+
+.masthead .role span:last-of-type::after
+{
+    content: "";
+}
+
+.masthead .button-group
+{
+    margin-top: 20px;
+}
+
+.masthead .button-group
+{
+    margin-top: 20px;
+}
+
+.masthead .button-group button,
+.masthead .button-group .btn
+{
+    width: 200px;
+    height: 50px;
+    font-size: calc(100% + 3px);
+}
+
+/* MASTHEAD STYLING  END*/
+
+/* ABOUT ME SECTION */
+
+.about
+{
+    display: flex;
+    justify-content: center;
+}
+
+.about .image
+{
+    background: rgb(208, 206, 206, 0.4);
+    width:  400px;
+    height: 400px;
+}
+
+.about .image img
+{
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.about .contents
+{
+    width: 600px;
+    margin-right: 10px;
+    line-height: 50px;
+    font-size: calc(100% + 0.3rem);
+}
+
+/* ABOUT ME SECTION END*/
+
+/* PROJECTS SECTION */
+
+.projects .body
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.projects .body .project-card
+{
+    width: 24%;
+    margin-right: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.projects .body .project-card .project-image
+{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects .body .project-card .project-image img
+{
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.projects .body .project-card .project-card-body
+{
+    padding: 1rem 0.5rem;
+}
+
+.projects .body .project-card .project-card-body .project-name
+{
+    font-weight: bold;
+    font-size: calc(100% + 0.5rem);
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.projects .body .project-card .project-card-body .project-languages 
+{
+    width: 100%;
+}
+
+.projects .body .project-card .project-card-body .project-languages a
+{
+    display: inline-block;
+}
+
+.projects .body .project-card .project-card-body .project-languages a::after
+{
+    content: "  .";
+    font-size: 20px;
+}
+
+.projects .body .project-card .project-card-body .project-languages a:last-of-type::after
+{
+    content: "";
+}
+
+.projects .body .project-card .project-card-body .button-group
+{
+    margin-top: 10px;
+    justify-content: right;
+}
+
+/* PROJECTS SECTION END*/
+
+/* NEWSLETTER SECTION */
+
+.newsletter
+{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    background: url("../images/desktop-image-hero-3.jpg"), linear-gradient( var(--background-white), var(--background-dark) );
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--text-white);
+    flex-direction: column;
+    padding: 0 3rem;
+}
+
+.newsletter .title
+{
+    font-size: calc(100% + 2rem);
+}
+
+.newsletter .para
+{
+    margin-bottom: 10px;
+    font-size: calc(100% + 0.4rem);
+    letter-spacing: 2.5px;
+}
+
+.newsletter .form
+{
+    display: flex;
+    width: 90%;
+    /* border: red solid 2px; */
+}
+
+.newsletter .form input 
+{
+    width: 100%;
+    margin-right: 10px;
+    outline: none;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    padding: 0 1rem;
+}
+
+.newsletter .form button
+{
+    border-radius: 2px;
+}
+
+/* NEWSLETTER SECTION END*/
+
+/* GALLERY SECTION */
+
+.gallery .body
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery .gallery-card 
+{
+    margin-bottom: 20px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.gallery .gallery-card .gallery-image
+{
+    max-width: 300px;
+    max-height: 300px;
+    overflow: hidden;
+    position: relative;
+    background: rgb(208, 206, 206, 0.4);
+}
+
+.gallery .gallery-card .gallery-image img
+{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* GALLERY SECTION */
+
+/* CONTACT SECTION */
+
+.contact
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .image
+{
+    background: rgb(208, 206, 206, 0.4);
+    width:  450px;
+    height: 450px;
+}
+
+.contact .image img
+{
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.contact .contents
+{
+    width: 600px;
+    margin-right: 10px;
+    line-height: 50px;
+    font-size: calc(100% + 0.3rem);
+}
+
+.contact .contact-form
+{
+    display: block;
+    width: 100%;
+}
+
+.contact .contact-form label
+{
+    display: block;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.contact .contact-form label small
+{
+    color: var(--link-color);
+    text-transform: lowercase;
+}
+
+.contact .contact-form input,
+.contact .contact-form textarea
+{
+    width: 100%;
+    height: 40px;
+    display: block;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--background-dark);
+}
+
+.contact .contact-form textarea
+{
+    resize: vertical;
+    height: 150px;
+}
+
+.contact .contact-form .submit
+{
+    margin-top: 20px;
+    text-align: right;
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
+
+.contact .contact-form .submit button
+{
+    width: 250px;
+    height: 50px;
+}
+
+.contact .or 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.contact .or .line 
+{
+    border: #000 solid 1px;
+    height: max-content;
+    margin: 0 5px;
+    width: 50%;
+}
+
+.contact .socials
+{
+    margin-bottom: 10px;
+}
+
+.contact .socials,
+.contact .socials .social
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .socials .social
+{
+    width: 50px;
+    height: 50px;
+    background: rgb(208, 206, 206, 0.4);
+    margin: 0 5px;
+    border-radius: 50%;
+    transition: .5s transform ease-in-out;
+}
+
+.contact .socials .social:hover
+{
+    background: var(--link-color);
+    color: var(--text-white);
+    transform: scale(1.1);
+}
+
+/* CONTACT SECTION END*/
+
+/* INSPIRATION MESSAGE */
+
+.inspirationMessage
+{
+    background: url('../images/pexels-pixabay-270488.png');
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.inspirationMessage .opacity
+{
+    background: rgb(0,0,0, 0.5);
+    color: var(--text-white);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 3rem;
+    font-size: calc(100% + 0.5rem);
+}
+
+/* INSPIRATION MESSAGE  END*/
+
+/* FOOTER  */
+
+footer
+{
+    margin-top: 20px;
+    height: 12.5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-dark);
+    color: var(--text-white);
+    font-size: calc(100% + 0.5rem);
+    letter-spacing: 2px;
+}
+
+footer  .brand
+{
+    color: var(--link-color);
+}
+
+/* FOOTER  END*/
